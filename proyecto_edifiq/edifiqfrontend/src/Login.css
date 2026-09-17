@@ -1,0 +1,289 @@
+/* =====================================================
+   EDIFIQ - LOGIN / AUTH
+   ===================================================== */
+
+
+
+.auth-page {
+
+  position: relative;
+  left: 50%;
+  width: 100vw;
+  margin-left: -50vw;
+  min-height: 100vh;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (max-width: 860px) {
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* =====================================================
+   LEFT — BRAND PANEL
+   ===================================================== */
+
+.auth-brand-panel {
+  position: relative;
+  overflow: hidden;
+
+  background: #111827;
+
+  color: #ffffff;
+
+  padding: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (max-width: 860px) {
+  .auth-brand-panel {
+    display: none;
+  }
+}
+
+.auth-brand-logo {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.auth-brand-logo span {
+  color: #a9c3ff;
+}
+
+.auth-brand-copy h2 {
+  max-width: 380px;
+  font-size: clamp(28px, 3vw, 36px);
+  line-height: 1.2;
+  letter-spacing: -0.5px;
+  margin-bottom: 16px;
+}
+
+.auth-brand-copy p {
+  max-width: 360px;
+  color: #cddcfb;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.auth-brand-stats {
+  display: flex;
+  gap: 32px;
+}
+
+.auth-brand-stats div strong {
+  display: block;
+  font-size: 22px;
+  font-weight: 800;
+}
+
+.auth-brand-stats div small {
+  display: block;
+  color: #a9c3ff;
+  font-size: 11px;
+  margin-top: 3px;
+}
+
+/* =====================================================
+   RIGHT — FORM PANEL
+   ===================================================== */
+
+.auth-page-right {
+  position: relative;
+
+  background: #DCE4F0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 40px 24px;
+}
+
+.auth-back {
+  position: absolute;
+  top: 28px;
+  left: 28px;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  color: #626d7e;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s;
+}
+
+.auth-back:hover {
+  color: #2463eb;
+}
+
+@media (max-width: 860px) {
+  .auth-back {
+    position: static;
+    align-self: flex-start;
+    margin: 0 0 20px 6px;
+  }
+
+  .auth-page-right {
+    flex-direction: column;
+    padding-top: 32px;
+  }
+}
+
+.auth-form {
+  width: 100%;
+  max-width: 380px;
+
+  background: #ffffff;
+  border: 1px solid #e9edf3;
+  border-radius: 16px;
+
+  padding: 44px 36px 36px;
+
+  box-shadow: 0 25px 60px rgba(23, 32, 51, 0.08);
+
+  display: flex;
+  flex-direction: column;
+}
+
+.auth-form h2 {
+  color: #172033;
+  font-size: 26px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
+}
+
+.auth-form h2::after {
+  content: "Ingresa a tu cuenta de EdifiQ";
+  display: block;
+
+  color: #8a94a5;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0;
+  margin-top: 8px;
+}
+
+.auth-form input {
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 14px;
+  color: #172033;
+
+  background: #f7faff;
+  border: 1px solid #e2e8f0;
+  border-radius: 9px;
+
+  padding: 13px 15px;
+  margin-top: 22px;
+
+  outline: none;
+  transition: 0.2s;
+}
+
+.auth-form input::placeholder {
+  color: #9aa4b2;
+}
+
+.auth-form input:hover {
+  border-color: #cbd9f7;
+}
+
+.auth-form input:focus {
+  background: #ffffff;
+  border-color: #2463eb;
+  box-shadow: 0 0 0 3px rgba(36, 99, 235, 0.12);
+}
+
+.auth-error {
+  color: #d1453b;
+  background: #fdf1f0;
+  border: 1px solid #f6d4d1;
+  border-radius: 8px;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  padding: 10px 13px;
+  margin-top: 18px;
+}
+
+.auth-form button {
+  width: 100%;
+
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+
+  background: #2463eb;
+  border: none;
+  border-radius: 9px;
+
+  padding: 14px;
+  margin-top: 28px;
+
+  cursor: pointer;
+  box-shadow: 0 10px 25px rgba(36, 99, 235, 0.22);
+
+  transition: 0.2s;
+}
+
+.auth-form button:hover {
+  background: #174fc4;
+  transform: translateY(-1px);
+}
+
+.auth-form button:active {
+  transform: translateY(0);
+}
+
+.auth-form > a {
+  align-self: center;
+
+  color: #626d7e;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 600;
+
+  margin-top: 24px;
+  transition: 0.2s;
+}
+
+.auth-form > a:hover {
+  color: #2463eb;
+}
+
+.auth-form.recovery-form h2::after {
+  content: "Te enviaremos un enlace a tu correo registrado";
+}
+
+.auth-form .auth-link {
+  align-self: center;
+  margin-top: 24px;
+}
+
+.auth-success {
+  color: #23734d;
+  background: #effaf4;
+  border: 1px solid #c9eed9;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.5;
+  padding: 10px 13px;
+  margin-top: 18px;
+}
